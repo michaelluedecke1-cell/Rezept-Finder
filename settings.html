@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einstellungen & Backup</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#42A5F5">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+        .header { display: flex; align-items: center; gap: 15px; }
+        .back-link { text-decoration: none; font-size: 28px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 20px; }
+        input, button { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        button { background: #42A5F5; color: white; border: none; cursor: pointer; font-weight: bold; font-size: 16px; }
+        button:hover { background: #1E88E5; }
+        
+        /* Spezielle Buttons fürs Backup */
+        .file-upload { display: none; }
+        .btn-secondary { background: #757575; }
+        .btn-secondary:hover { background: #616161; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="back-link" title="Zurück">⬅️</a>
+        <h1>Einstellungen</h1>
+    </div>
+
+    <div class="card">
+        <h2>API-Schlüssel</h2>
+        <p>Hinterlege hier deinen Groq API-Key.</p>
+        <input type="password" id="apiKey" placeholder="gsk_...">
+        <button id="saveKey">Key speichern</button>
+    </div>
+
+    <div class="card">
+        <h2>Meine Rezepte sichern 💾</h2>
+        <p>Lade deine gespeicherten Rezepte als Datei herunter oder stelle sie aus einem alten Backup wieder her.</p>
+        
+        <button id="exportBackupBtn">⬇️ Backup herunterladen</button>
+        
+        <input type="file" id="importFile" class="file-upload" accept=".json">
+        <button id="importBackupBtn" class="btn-secondary" style="margin-top: 15px;">⬆️ Backup laden</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
