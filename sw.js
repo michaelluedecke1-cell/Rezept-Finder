@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rezept-app-v2.6'; // Version hochgezählt, um Cache zu aktualisieren
+const CACHE_NAME = 'rezept-app-v3.6'; // Version hochgezählt, um Cache zu aktualisieren
 const ASSETS = [
     '/',
     '/index.html',
