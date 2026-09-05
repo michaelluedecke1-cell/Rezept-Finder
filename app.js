@@ -135,12 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     method: 'POST',
                     headers: { 'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        model: "gpt-oss-120b",
+                        model: "openai/gpt-oss-120b",   // <-- HIER die Änderung
                         messages: [
                             { role: "system", content: "Du bist ein kreativer Koch. Der Nutzer nennt dir Zutaten. Erstelle ein einfaches Rezept, das primär diese Zutaten verwendet. Gib dem Rezept einen Titel, liste die Zutaten auf und schreibe eine kurze Anleitung." },
                             { role: "user", content: `Ich habe: ${ingredients}.` }
                         ],
                         temperature: 0.7
+                        // Falls du ein Token-Limit setzen möchtest (optional):
+                        // max_tokens: 600
                     })
                 });
 
