@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     method: 'POST',
                     headers: { 'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        model: "qwen3.6-27b",
+                        model: "gpt-oss-120b",
                         messages: [
                             { role: "system", content: "Du bist ein kreativer Koch. Der Nutzer nennt dir Zutaten. Erstelle ein einfaches Rezept, das primär diese Zutaten verwendet. Gib dem Rezept einen Titel, liste die Zutaten auf und schreibe eine kurze Anleitung." },
                             { role: "user", content: `Ich habe: ${ingredients}.` }
